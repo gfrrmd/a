@@ -3,9 +3,9 @@ require('dotenv').config();
 
 const bot = new Telegraf(process.env.BOT_TOKEN);
 const CHANNEL_ID = process.env.CHANNEL_ID;
-const TRIGGER_WORD = "/send"; // Kata kunci untuk mengirim menfess
+const TRIGGER_WORD = "mfs!"; // Kata kunci untuk mengirim menfess
 
-bot.start((ctx) => ctx.reply('Halo! Kirim pesanmu diawali dengan /send untuk mengirim ke channel.'));
+bot.start((ctx) => ctx.reply('Halo! Kirim pesanmu diawali dengan "mfs!" untuk mengirim ke channel.'));
 
 bot.on(['message', 'photo', 'video', 'document', 'audio'], async (ctx) => {
   // Cek apakah pesan mengandung trigger
