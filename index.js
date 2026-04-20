@@ -5,7 +5,7 @@ const bot = new Telegraf(process.env.BOT_TOKEN);
 const CHANNEL_ID = process.env.CHANNEL_ID;
 const TRIGGER_WORD = "mfs!"; // Kata kunci untuk mengirim menfess
 
-bot.start((ctx) => ctx.reply('Halo! Kirim pesanmu diawali dengan "mfs!" untuk mengirim ke channel.'));
+bot.start((ctx) => ctx.reply('Hai! Kirim pesanmu diawali dengan "mfs!" untuk mengirim ke channel. Kamu juga bisa mengirim media seperti Foto, Video, dan lainnya pastikan dengan kata trigger "mfs!"'));
 
 bot.on(['message', 'photo', 'video', 'document', 'audio'], async (ctx) => {
   // Cek apakah pesan mengandung trigger
